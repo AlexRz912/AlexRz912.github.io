@@ -1,0 +1,16 @@
+:root {
+  --padding: 10px;
+  --text-color: rgb(0, 187, 0);
+  --smartphone-width: 420px;
+  --c: rgba(0, 0, 0, 0.591);
+  font-family: Consolas;
+}
+
+body {
+  color: var(--text-color);
+  background-color: rgb(48, 48, 48);
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}

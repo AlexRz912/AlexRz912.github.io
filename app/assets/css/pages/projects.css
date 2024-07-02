@@ -1,0 +1,74 @@
+*::-webkit-scrollbar {
+  scrollbar-color: transparent transparent;
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+.container-display {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 40px;
+}
+
+.container-nocarousel-height {
+  height: 80vh;
+}
+
+.carousel {
+  width: 400px;
+  height: 80vh;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  margin: 20px;
+}
+
+.carousel__slide {
+  min-width: 400px;
+  width: 70%;
+  height: inherit;
+  scroll-snap-align: center;
+  background-color: #0003;
+  display: flex;
+  justify-content: center;
+}
+
+
+img {
+  width: 70%;
+  object-fit: cover;
+  justify-self: center;
+}
+
+.description {
+  align-self: center;
+}
+.description a {
+  color:rgb(203, 88, 88);
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .container-display {
+    flex-direction: column;
+  }
+  .carousel_karma {
+    align-self: center;
+    height: 60vh;
+  }
+
+  .carousel_karma img {
+    object-fit: cover;
+    width: 45%;
+  }
+}

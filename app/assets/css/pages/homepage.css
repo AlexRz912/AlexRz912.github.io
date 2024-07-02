@@ -1,0 +1,105 @@
+*::-webkit-scrollbar {
+  scrollbar-color: transparent transparent;
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+.projects-carousel {
+  height: 90vh;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+.carousel__viewport {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel__slide {
+  display: grid;
+  width: 33%;
+  height: 88vh;
+  background-color: rgb(14, 21, 14);
+  border-radius: 2px;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+#desktribe__slide img {
+  object-fit: cover;
+  height: 100%;
+}
+#animatext__slide img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.carousel__slide img {
+  justify-self: center;
+  width: 70%;
+  min-width: 295px;
+  object-fit: cover;
+}
+.carousel__slide > * {
+  grid-area: 1/1;
+  transition: .4s ease-out;
+}
+
+.carousel__caption {
+  display: grid;
+  height: 85vh;
+  align-items: end;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0000;
+  padding: .75rem;
+  background: var(--c);
+  clip-path: inset(0 100% 0 0);
+  color: #bcbcbc;
+}
+
+.carousel__caption-container-padding {
+  padding: 20px;
+}
+
+.carousel__slide:hover .carousel__caption {
+  clip-path: inset(0 0 0 0);
+}
+
+
+@media screen and (max-width: 1400px) {
+  .carousel__slide {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+
+  .carousel__viewport {
+    width: 1400px;
+  }
+
+  .navbar {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .projects-carousel {
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel__caption {
+    clip-path: inset(0 0 0 0);
+  }
+}
